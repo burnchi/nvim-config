@@ -1,5 +1,8 @@
 return {
   'luozhiya/fittencode.nvim',
+  opts = {
+
+  }
 }
 
 -- default keymap
