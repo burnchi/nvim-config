@@ -32,14 +32,13 @@ vim.opt.splitkeep = "cursor"
 vim.opt.mouse = ""
 local opt = vim.opt
 -- debug column
-opt.signcolumn = 'no'
+opt.signcolumn = "no"
 
 -- Add asterisks in block comments
 vim.opt.formatoptions:append({ "r" })
 
-
+vim.opt.timeoutlen = 1000
 -- remove diagnostic virtual text
 -- vim.diagnostic.config({
 --     virtual_text = false
 -- })
-
