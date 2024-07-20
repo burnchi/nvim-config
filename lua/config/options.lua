@@ -7,6 +7,8 @@ opt.fileencoding = "utf-8"
 
 opt.number = true
 
+-- 粘贴不会乱码
+opt.clipboard = "unnamedplus"
 opt.title = true
 opt.autoindent = true
 opt.smartindent = true
