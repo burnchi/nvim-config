@@ -55,3 +55,28 @@ Map("i", "<a-k>", function()
 end, { desc = "dismiss_all_suggestions" })
 
 Map("n", "<leader>fc", "<cmd>Fitten start_chat<cr>", { desc = "start_chat" })
+
+-- crates
+Map("n", "<leader>cf", "<cmd>Crates focus_popup<cr>")
+
+-- rust debug
+Map("n", "<c-b>", function()
+  require("dap").toggle_breakpoint()
+end, { desc = "toggle Breakpoint" })
+
+Map("n", "<f5>", function()
+  require("dap").step_over()
+end, { desc = "step_over" })
+
+Map("n", "<f6>", function()
+  require("dap").step_into()
+end, { desc = "step_into" })
+
+Map("n", "<f7>", function()
+  require("dap").step_out()
+end, { desc = "step_out" })
+
+Map("n", "<f8>", function()
+  require("dap").close()
+  require("dapui").close()
+end, { desc = "stop debug" })
