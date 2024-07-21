@@ -23,9 +23,16 @@ return {
     },
   },
   opts = {
-    size = 16,
+    size = function(term)
+      if term.direction == "horizontal" then
+        return 20
+      elseif term.direction == "vertical" then
+        return vim.o.columns * 0.4
+      end
+    end,
     open_mapping = [[<C-t>]],
-    direction = "horizontal",
+    -- direction = "horizontal",
+    direction = "vertical",
     -- is same as colorscheme
     shade_terminals = false,
     insert_mappings = true,
