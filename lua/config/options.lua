@@ -1,6 +1,8 @@
 -- lazyvim default options
 -- https://www.lazyvim.org/configuration/general
 
+-- 注释的地方有的是因为lazyvim帮我们配好了
+
 local opt = vim.opt
 vim.g.mapleader = " "
 
@@ -11,6 +13,8 @@ opt.fileencoding = "utf-8"
 
 -- 显示行号
 -- opt.number = true
+-- 数字列宽
+opt.numberwidth = 1
 
 -- 粘贴不会乱码
 -- opt.clipboard = "unnamedplus"
@@ -38,8 +42,9 @@ opt.hlsearch = true
 
 -- 鼠标右键后不会有提示
 opt.mouse = ""
--- debug column
+-- display debug column and set width
+opt.signcolumn = "yes:1"
 -- opt.signcolumn = "no"
 
--- 按键延迟 gc 触发不了
+-- 不按键延迟 gc 触发不了
 opt.timeoutlen = 1000

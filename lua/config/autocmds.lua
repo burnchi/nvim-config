@@ -20,3 +20,11 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 --
+
+-- 数字列颜色
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+  pattern = "*",
+  callback = function()
+    vim.api.nvim_set_hl(0, "LineNr", { fg = "#a9b1d6", bg = "none" })
+  end,
+})
